@@ -7,8 +7,11 @@ import { MongooseModule } from "@nestjs/mongoose";
 import { TaskModule } from './task/task.module';
 
 @Module({
-  imports: [TaskModule, MongooseModule.forRoot('mongodb://localhost/nest-tutorial')],
+  imports: [MongooseModule.forRoot('mongodb://localhost/nest-tutorial'), TaskModule],
   controllers: [AppController, TaskController],
   providers: [AppService, TaskService],
+  exports: []
 })
-export class AppModule {}
+export class AppModule {
+
+}

@@ -8,7 +8,7 @@ import { CreateTaskDto } from './dto/create-task.dto';
 @Injectable()
 export class TaskService {
 
-    constructor(@InjectModel('task') private taskModel: Model<Task>){}
+    constructor(@InjectModel('Task') private taskModel: Model<Task>){}
 
     //async - await -> para funciones asinncronas
     async getTasks(){
